@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aaron Udho</title>
+<meta name="description" content="Engineering student and entrepreneur in Toronto. I build things before anyone tells me I'm ready to.">
+<link rel="canonical" href="https://aaronudho.com/">
+<meta property="og:title" content="Aaron Udho">
+<meta property="og:description" content="Engineering student and entrepreneur in Toronto. I build things before anyone tells me I'm ready to.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://aaronudho.com/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23C24A66'/%3E%3Ctext x='16' y='23' font-family='Georgia,serif' font-size='19' font-weight='700' fill='%23fff' text-anchor='middle'%3EA%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,400;9..144,700;9..144,900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#FFFAFB;
+  --ink:#23201D;
+  --ink-soft:#6E645E;
+  --blush:#FDF0F3;
+  --line:#F3C9D3;
+  --rose:#C24A66;
+  --rose-deep:#A53B55;
+  --sand:#FBF3EA;
+  --cream:#FDF7F0;
+  --rosesoft:#F9E3E8;
+  --field:#F7DCE3;
+  color-scheme:light;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{
+  margin:0;background:var(--paper);color:var(--ink);
+  font-family:"Plus Jakarta Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  font-size:17px;line-height:1.62;font-weight:400;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block;height:auto}
+.shell{max-width:1120px;margin:0 auto;padding-inline:26px}
+.serif{font-family:Fraunces,Georgia,"Times New Roman",serif}
+
+/* ===== nav ===== */
+.top{display:flex;justify-content:space-between;align-items:center;gap:18px;padding-block:20px;flex-wrap:wrap}
+.top .mark{
+  font-family:Fraunces,Georgia,serif;font-weight:900;font-size:19px;
+  letter-spacing:-.02em;text-decoration:none;color:var(--ink);
+  font-variation-settings:"WONK" 1,"SOFT" 20;
+}
+.top nav{display:flex;gap:6px;flex-wrap:wrap}
+.top nav a{
+  text-decoration:none;color:var(--ink);font-weight:600;font-size:14.5px;
+  padding:7px 14px;border-radius:999px;border:1.5px solid transparent;
+  transition:background .15s,border-color .15s;
+}
+.top nav a:hover{background:var(--blush);border-color:var(--line)}
+.top nav a:focus-visible{outline:2px solid var(--rose);outline-offset:2px}
+
+/* ===== hero ===== */
+.hero{padding-block:30px 10px}
+.kicker{
+  display:inline-block;background:var(--blush);color:var(--rose);
+  font-weight:700;font-size:13.5px;padding:7px 16px;border-radius:999px;
+  margin:0 0 26px;border:1.5px solid var(--line);
+}
+.hero h1{
+  font-family:Fraunces,Georgia,serif;
+  font-weight:900;font-variation-settings:"WONK" 1,"SOFT" 30;
+  font-size:clamp(50px,9.2vw,112px);
+  line-height:.94;letter-spacing:-.035em;
+  margin:0 0 34px;max-width:16ch;
+}
+.hero h1 em{
+  font-style:normal;
+  background:linear-gradient(transparent 52%, var(--line) 52%, var(--line) 92%, transparent 92%);
+}
+.herogrid{display:grid;grid-template-columns:minmax(0,1.02fr) minmax(0,.98fr);gap:46px;align-items:start}
+.herotext p{
+  font-size:clamp(18px,2.05vw,20.5px);line-height:1.58;
+  margin:0 0 20px;max-width:44ch;color:var(--ink);
+}
+.herotext p.second{color:var(--ink-soft);font-size:clamp(16.5px,1.8vw,18.5px)}
+.herobtns{display:flex;gap:10px;flex-wrap:wrap;margin-top:28px}
+.btn.ghost{background:transparent;color:var(--rose);border-color:var(--line)}
+.btn.ghost:hover{background:var(--blush);color:var(--rose-deep);border-color:var(--rose)}
+
+/* gallery */
+.gallery{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.shot{
+  background:var(--blush);border:2px solid var(--line);border-radius:12px;
+  overflow:hidden;position:relative;
+}
+.shot.lead{grid-column:1 / -1}
+.shot img{width:100%}
+.shotcap{
+  padding:10px 14px 12px;font-weight:600;font-size:13.5px;color:var(--ink);
+  display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;background:var(--blush);
+}
+.shotcap span:last-child{color:var(--ink-soft);font-weight:500}
+
+/* ===== band ===== */
+.band{margin-top:64px;border-block:2px solid var(--line);background:var(--sand)}
+.band .shell{padding-block:48px}
+.band h2{
+  font-family:Fraunces,Georgia,serif;font-weight:900;font-variation-settings:"WONK" 1;
+  font-size:clamp(28px,4.3vw,42px);letter-spacing:-.028em;margin:0 0 8px;line-height:1.08;
+}
+.band .when{font-weight:600;font-size:14px;color:var(--rose);margin:0 0 26px}
+.nowlist{display:grid;grid-template-columns:repeat(auto-fit,minmax(248px,1fr));gap:22px;margin:0;padding:0;list-style:none}
+.nowlist li{border-top:2px solid var(--line);padding-top:14px}
+.nowlist b{display:block;font-weight:700;font-size:17px;margin-bottom:4px}
+.nowlist span{font-size:15.5px;color:var(--ink-soft);line-height:1.55}
+
+/* ===== work ===== */
+.work{padding-block:72px 20px}
+.work > h2{
+  font-family:Fraunces,Georgia,serif;font-weight:900;font-variation-settings:"WONK" 1;
+  font-size:clamp(32px,5.6vw,58px);letter-spacing:-.03em;margin:0 0 10px;line-height:1.02;
+}
+.work > .sub{font-size:18px;color:var(--ink-soft);margin:0 0 42px;max-width:50ch}
+.piece{
+  border:2px solid var(--line);border-radius:14px;
+  padding:34px 32px;margin-bottom:24px;
+  display:grid;grid-template-columns:minmax(0,1fr) auto;gap:16px 34px;align-items:start;
+}
+.piece.a{background:var(--blush)}
+.piece.b{background:var(--cream)}
+.piece.c{background:var(--rosesoft)}
+.piece.c{grid-template-columns:minmax(0,1fr) auto}
+.piece h3{
+  font-family:Fraunces,Georgia,serif;font-weight:900;font-variation-settings:"WONK" 1;
+  font-size:clamp(26px,3.7vw,38px);letter-spacing:-.028em;margin:0 0 12px;line-height:1.05;
+}
+.piece p{margin:0 0 20px;max-width:54ch;font-size:16.8px}
+.tagrow{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 20px}
+.tag{
+  font-size:13px;font-weight:700;padding:5px 12px;border-radius:999px;
+  background:rgba(255,255,255,.8);border:1.5px solid var(--line);color:var(--ink);
+}
+.btn{
+  display:inline-block;text-decoration:none;font-weight:700;font-size:15.5px;
+  background:var(--rose);color:#fff;padding:12px 22px;border-radius:999px;
+  border:2px solid var(--rose);transition:transform .14s,background .14s,border-color .14s;
+}
+.btn:hover{background:var(--rose-deep);border-color:var(--rose-deep);transform:translateY(-2px)}
+.btn:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+.num{
+  font-family:Fraunces,Georgia,serif;font-weight:900;color:var(--rose);
+  font-size:clamp(40px,7vw,76px);line-height:.9;opacity:.2;letter-spacing:-.04em;
+}
+
+/* ===== creators ===== */
+.deal{border-block:2px solid var(--line);background:var(--field)}
+.deal .shell{padding-block:58px}
+.deal h2{
+  font-family:Fraunces,Georgia,serif;font-weight:900;font-variation-settings:"WONK" 1;
+  font-size:clamp(30px,5.2vw,52px);letter-spacing:-.03em;margin:0 0 14px;line-height:1.06;max-width:26ch;
+}
+.deal .sub{font-size:18px;margin:0 0 34px;max-width:56ch;font-weight:500}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(192px,1fr));gap:16px;margin:0 0 34px;padding:0;list-style:none;counter-reset:s}
+.steps li{background:var(--paper);border:2px solid var(--line);border-radius:12px;padding:20px 20px 22px}
+.steps li::before{
+  counter-increment:s;content:counter(s);
+  font-family:Fraunces,Georgia,serif;font-weight:900;font-size:26px;color:var(--rose);
+  display:block;margin-bottom:8px;line-height:1;
+}
+.steps li b{display:block;font-weight:700;font-size:16.5px;margin-bottom:5px}
+.steps li span{font-size:15px;color:var(--ink-soft);line-height:1.55}
+.dealnote{font-size:15.5px;max-width:62ch;margin:0;font-weight:500}
+
+/* ===== contact ===== */
+.contact{background:var(--rose);color:#fff;border-bottom:2px solid var(--rose-deep)}
+.contact .shell{padding-block:68px}
+.contact h2{
+  font-family:Fraunces,Georgia,serif;font-weight:900;font-variation-settings:"WONK" 1;
+  font-size:clamp(34px,6vw,64px);letter-spacing:-.032em;margin:0 0 16px;line-height:1.02;
+}
+.contact p{font-size:18px;margin:0 0 30px;max-width:48ch;color:#FBE4E9}
+.mailbtn{
+  display:inline-block;text-decoration:none;font-weight:700;
+  font-size:clamp(17px,2.6vw,22px);
+  background:#fff;color:var(--rose);
+  padding:16px 30px;border-radius:999px;border:2px solid #fff;
+  transition:transform .14s;word-break:break-word;
+}
+.mailbtn:hover{transform:translateY(-2px)}
+.mailbtn:focus-visible{outline:3px solid var(--ink);outline-offset:4px}
+.elsewhere{margin:26px 0 0;display:flex;gap:10px;flex-wrap:wrap}
+.elsewhere a{
+  text-decoration:none;color:#fff;font-weight:600;font-size:15px;
+  border:2px solid rgba(255,255,255,.55);border-radius:999px;padding:9px 18px;
+}
+.elsewhere a:hover{border-color:#fff;background:rgba(255,255,255,.16)}
+
+footer{padding-block:24px 40px;font-size:14px;color:var(--ink-soft);display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;font-weight:500}
+
+/* photo stepper */
+.pgal .shot{border-radius:12px}
+.pnav{display:inline-flex;align-items:center;gap:9px;font-weight:600;color:var(--ink-soft)}
+.pnav button{
+  width:30px;height:30px;border-radius:999px;cursor:pointer;
+  border:1.5px solid var(--line);background:#fff;color:var(--rose);
+  font-size:17px;line-height:1;font-family:inherit;
+}
+.pnav button:hover{background:var(--rose);color:#fff;border-color:var(--rose)}
+.pnav button:focus-visible{outline:2px solid var(--rose);outline-offset:2px}
+.pnav button[disabled]{opacity:.35;cursor:default}
+.pnav button[disabled]:hover{background:#fff;color:var(--rose);border-color:var(--line)}
+
+/* product carousel */
+.shelf{grid-column:1 / -1;margin-top:10px}
+.stage{
+  position:relative;height:420px;perspective:1300px;
+  display:flex;align-items:center;justify-content:center;
+}
+.stage figure{
+  position:absolute;margin:0;width:262px;
+  border-radius:9px;overflow:hidden;
+  box-shadow:0 12px 30px rgba(60,25,35,.2);
+  transition:transform .5s cubic-bezier(.3,.8,.3,1),opacity .4s;
+  cursor:pointer;background:#fff;
+}
+.stage figure img{width:100%;display:block}
+.stage figure.c{transform:translateX(0) scale(1);opacity:1;z-index:3}
+.stage figure.l{transform:translateX(-162px) scale(.8) rotateY(22deg);opacity:.62;z-index:2}
+.stage figure.r{transform:translateX(162px) scale(.8) rotateY(-22deg);opacity:.62;z-index:2}
+.stage figure.hide{transform:scale(.68);opacity:0;z-index:1;pointer-events:none}
+.shelfnav{display:flex;align-items:center;justify-content:center;gap:14px;margin-top:16px;font-weight:600;color:var(--ink-soft);font-size:14.5px}
+.shelfnav button{
+  width:38px;height:38px;border-radius:999px;cursor:pointer;
+  border:2px solid var(--rose);background:transparent;color:var(--rose);
+  font-size:20px;line-height:1;font-family:inherit;
+}
+.shelfnav button:hover{background:var(--rose);color:#fff}
+.shelfnav button:focus-visible{outline:3px solid var(--ink);outline-offset:2px}
+.shelfempty{text-align:center;color:var(--ink-soft);font-size:15px;padding:40px 0}
+@media (prefers-reduced-motion:reduce){.stage figure{transition:none}}
+
+@media (max-width:880px){
+  .stage{height:330px}
+  .stage figure{width:196px}
+  .stage figure.l{transform:translateX(-96px) scale(.78) rotateY(20deg)}
+  .stage figure.r{transform:translateX(96px) scale(.78) rotateY(-20deg)}
+  .herogrid{grid-template-columns:1fr;gap:34px}
+  .gallery{max-width:420px}
+  .piece{grid-template-columns:1fr;padding:26px 22px}
+  .num{display:none}
+  .band{margin-top:48px}
+  .work{padding-block:54px 14px}
+}
+</style>
+</head>
+<body>
+
+<div class="shell">
+  <header class="top">
+    <a class="mark" href="/">Aaron Udho</a>
+    <nav>
+      <a href="#now">Right now</a>
+      <a href="#work">Work</a>
+      <a href="#creators">Creators</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <div class="hero">
+    <p class="kicker">Toronto · Engineering student and entrepreneur</p>
+    <h1>I build things before anyone tells me I'm <em>ready to</em>.</h1>
+    <div class="herogrid">
+      <div class="herotext">
+        <p>I'm in my second year of mechanical engineering at Toronto Metropolitan University. Outside of class I run an online store and build digital products for creators.</p>
+        <p class="second">I'd rather have a finished thing with problems than a perfect plan nobody has seen. Everything on this page started as something I had no idea how to do.</p>
+        <div class="herobtns">
+          <a class="btn" href="#work">See what I've made</a>
+          <a class="btn ghost" href="#creators">Work with me</a>
+        </div>
+      </div>
+
+      <div class="pgal">
+        <div class="shot" id="pshot">
+          <img id="pimg" src="photo-1.jpg" alt="Aaron Udho" width="860" height="860">
+          <div class="shotcap">
+            <span id="pcap">Aaron Udho, Toronto</span>
+            <span class="pnav">
+              <button type="button" id="pprev" aria-label="Previous photo">&#8249;</button>
+              <span id="pcount">1 / 1</span>
+              <button type="button" id="pnext" aria-label="Next photo">&#8250;</button>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="band" id="now">
+  <div class="shell">
+    <h2>What I'm working on right now</h2>
+    <p class="when">Updated October 2026</p>
+    <ul class="nowlist">
+      <li><b>Scaling Snugget</b><span>Prioritising quality over quantity, and marketing it properly on Instagram.</span></li>
+      <li><b>Digital products for creators</b><span>Writing ebooks that creators put their name on, and lining up the next one.</span></li>
+      <li><b>Looking for an internship</b><span>Mechanical engineering, summer 2027. Happy to talk about anything in design or manufacturing.</span></li>
+    </ul>
+  </div>
+</div>
+
+<div class="shell">
+  <section class="work" id="work">
+    <h2>Things I've made</h2>
+    <p class="sub">Three unrelated projects, which is the point. I like the part where nothing exists yet.</p>
+
+    <article class="piece a">
+      <div>
+        <h3>Engineering portfolio</h3>
+        <div class="tagrow"><span class="tag">CAD</span><span class="tag">Design</span><span class="tag">A game I built</span></div>
+        <p>Projects from my degree alongside things I made on my own, including a game I built from scratch. The coursework shows I can do it. The game shows I'd do it anyway.</p>
+        <a class="btn" href="https://aaronudho.github.io/portfolio/" target="_blank" rel="noopener">See the portfolio</a>
+      </div>
+      <div class="num">01</div>
+    </article>
+
+    <article class="piece b">
+      <div>
+        <h3>Snugget</h3>
+        <div class="tagrow"><span class="tag">Ecommerce</span><span class="tag">Shopify</span><span class="tag">Solo operated</span></div>
+        <p>An online store I run end to end. I choose the products, write every page, shoot the creative and handle the orders. Nobody taught me any of it, which was the whole exercise.</p>
+        <a class="btn" href="https://snugget.ca" target="_blank" rel="noopener">Visit the store</a>
+      </div>
+      <div class="num">02</div>
+    </article>
+
+    <article class="piece c">
+      <div>
+        <h3>Digital products</h3>
+        <div class="tagrow"><span class="tag">Deep research</span><span class="tag">Writing</span><span class="tag">Creator partnerships</span></div>
+        <p>Give me a topic and a brief and I'll build the book around it. Not the general answer you get from asking an AI a question. Proper research, every claim traced back to a real source, and where two sources disagree I print both instead of smoothing it over. Then I pitch it to the creators whose audience actually needs it.</p>
+      </div>
+      <div class="num">03</div>
+      <div class="shelf">
+        <div class="stage" id="stage"></div>
+        <div class="shelfnav">
+          <button type="button" id="sprev" aria-label="Previous cover">&#8249;</button>
+          <span id="scount"></span>
+          <button type="button" id="snext" aria-label="Next cover">&#8250;</button>
+        </div>
+      </div>
+    </article>
+  </section>
+</div>
+
+<div class="deal" id="creators">
+  <div class="shell">
+    <h2>If you have an audience and nothing of your own to sell them</h2>
+    <p class="sub">You spent years earning their trust and every link in your bio sends them to somebody else's product. Tell me what your audience keeps asking you and I'll build the book for it. Here is the entire arrangement, no call required.</p>
+    <ol class="steps">
+      <li><b>I write it</b><span>You give me the brief. I do the research and the writing. Your name goes on the cover.</span></li>
+      <li><b>You approve it</b><span>Read it first. Don't like it, it never launches and you owe me nothing.</span></li>
+      <li><b>Link in bio</b><span>It sells for $19. Putting up the link is the whole job.</span></li>
+      <li><b>50/50, automatic</b><span>Straight to your PayPal within minutes of every sale.</span></li>
+      <li><b>I handle the rest</b><span>Store, delivery, refunds and tax are mine.</span></li>
+    </ol>
+    <p class="dealnote">No flat fee, no exclusivity, no posting schedule, nothing that clashes with a brand deal. Walk away whenever you want and I take the product down.</p>
+  </div>
+</div>
+
+<div class="contact" id="contact">
+  <div class="shell">
+    <h2>Let's talk</h2>
+    <p>Creator partnerships, internships, or anything you're building. I answer my own email, usually the same day.</p>
+    <a class="mailbtn" href="mailto:info@aaronudho.com">info@aaronudho.com</a>
+    <div class="elsewhere">
+      <a href="https://www.linkedin.com/in/aaronudho/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://aaronudho.github.io/portfolio/" target="_blank" rel="noopener">Portfolio</a>
+    </div>
+  </div>
+</div>
+
+<div class="shell">
+  <footer>
+    <span>Aaron Udho, Toronto, Ontario</span>
+    <span>aaronudho.com</span>
+  </footer>
+</div>
+
+<script>
+(function(){
+  var EXT = ["jpg","jpeg","png","webp"];
+  function tryImg(url){
+    return new Promise(function(res){
+      var im = new Image();
+      im.onload = function(){ res(true); };
+      im.onerror = function(){ res(false); };
+      im.src = url;
+    });
+  }
+  async function scan(prefix, max){
+    var found = [];
+    for (var i = 1; i <= max; i++){
+      var hit = null;
+      for (var e = 0; e < EXT.length; e++){
+        var url = prefix + i + "." + EXT[e];
+        if (await tryImg(url)){ hit = url; break; }
+      }
+      if (!hit) break;
+      found.push(hit);
+    }
+    return found;
+  }
+
+  /* ---------- photo stepper ---------- */
+  (async function(){
+    var img = document.getElementById("pimg");
+    if (!img) return;
+    var list = await scan("photo-", 20);
+    if (!list.length) return;
+    var i = 0;
+    var count = document.getElementById("pcount");
+    var prev = document.getElementById("pprev");
+    var next = document.getElementById("pnext");
+    function draw(){
+      img.src = list[i];
+      count.textContent = (i + 1) + " / " + list.length;
+      prev.disabled = list.length < 2;
+      next.disabled = list.length < 2;
+    }
+    prev.addEventListener("click", function(){ i = (i - 1 + list.length) % list.length; draw(); });
+    next.addEventListener("click", function(){ i = (i + 1) % list.length; draw(); });
+    draw();
+  })();
+
+  /* ---------- product carousel ---------- */
+  (async function(){
+    var stage = document.getElementById("stage");
+    if (!stage) return;
+    var list = await scan("product-", 30);
+    var count = document.getElementById("scount");
+    var prev = document.getElementById("sprev");
+    var next = document.getElementById("snext");
+    if (!list.length){
+      stage.innerHTML = '<p class="shelfempty">Add product-1.jpg to the repo.</p>';
+      prev.style.display = next.style.display = "none";
+      return;
+    }
+    var figs = list.map(function(src, idx){
+      var f = document.createElement("figure");
+      var im = document.createElement("img");
+      im.src = src;
+      im.alt = "Digital product cover " + (idx + 1);
+      im.loading = "lazy";
+      f.appendChild(im);
+      f.addEventListener("click", function(){ cur = idx; draw(); });
+      stage.appendChild(f);
+      return f;
+    });
+    var cur = 0;
+    function draw(){
+      var n = figs.length;
+      figs.forEach(function(f, idx){
+        var d = (idx - cur + n) % n;
+        f.className = d === 0 ? "c" : (d === 1 && n > 1) ? "r" : (d === n - 1 && n > 2) ? "l" : "hide";
+      });
+      count.textContent = (cur + 1) + " of " + n;
+      prev.disabled = next.disabled = n < 2;
+    }
+    prev.addEventListener("click", function(){ cur = (cur - 1 + figs.length) % figs.length; draw(); });
+    next.addEventListener("click", function(){ cur = (cur + 1) % figs.length; draw(); });
+    draw();
+  })();
+})();
+</script>
+</body>
+</html>
