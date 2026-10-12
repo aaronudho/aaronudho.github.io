@@ -1,40 +1,22 @@
 # aaronudho.com
 
-Flat files, no folders, no build step. Everything sits in the root of the repo.
+This is the built site. Every file here goes in the root of the GitHub repo.
 
-```
-index.html     the whole site
-CNAME          points GitHub Pages at aaronudho.com, don't delete
-product-1.jpg  digital product covers
-product-2.jpg
-product-3.jpg
-photo-1.jpg    photos of you
-```
+## Adding images
 
-## Adding a digital product cover
+Upload straight into the repo, no folders:
 
-Rename the image to the next number, `product-4.jpg`, then upload it to the repo.
-It appears in the rotating cover shelf automatically. Nothing to edit.
+- Product covers: `product-1.jpg`, `product-2.jpg`, `product-3.jpg`, then `product-4.jpg` and so on
+- Photos of me: `photo-1.jpg`, then `photo-2.jpg` and so on
 
-## Adding a photo of yourself
+No gaps in the numbers. If you skip 4 and upload 5, the site stops looking at 4.
+jpg, jpeg, png and webp all work.
 
-Rename it `photo-2.jpg`, then `photo-3.jpg`, and upload.
-The arrows under the photo step through them.
+## Changing words
 
-## The one rule
+Words live in the source project (`src/data.js`), not here. Edit there, run
+`npm run build`, upload the new `index.html`.
 
-**Numbers must run 1, 2, 3 with no gaps.** The page tries each number in order and stops at the
-first one missing. `.jpg`, `.jpeg`, `.png` and `.webp` all work. Keep covers portrait, photos
-square, under about 300KB each.
+## Do not delete
 
-## The contact form
-
-Submissions go through FormSubmit, which emails them to info@aaronudho.com. No account needed.
-
-**The first submission will not arrive.** Instead FormSubmit emails you a link to confirm you
-own the address. Click it once and every submission after that lands in your inbox normally.
-So after you upload this, fill the form in yourself and watch for that confirmation.
-
-## Email
-
-`info@aaronudho.com` runs on iCloud+ Custom Email Domain. Sends and receives in Apple Mail.
+`CNAME` keeps aaronudho.com pointed at this repo.
