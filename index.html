@@ -10,23 +10,23 @@
 <meta property="og:description" content="Engineering student and entrepreneur in Toronto. I build things before anyone tells me I'm ready to.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://aaronudho.com/">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23C24A66'/%3E%3Ctext x='16' y='23' font-family='Georgia,serif' font-size='19' font-weight='700' fill='%23fff' text-anchor='middle'%3EA%3C/text%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%232E63D4'/%3E%3Ctext x='16' y='23' font-family='Georgia,serif' font-size='19' font-weight='700' fill='%23fff' text-anchor='middle'%3EA%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,400;9..144,700;9..144,900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,400;9..144,700;9..144,900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 :root{
-  --paper:#FFFAFB;
-  --ink:#23201D;
-  --ink-soft:#6E645E;
-  --blush:#FDF0F3;
-  --line:#F3C9D3;
-  --rose:#C24A66;
-  --rose-deep:#A53B55;
-  --sand:#FBF3EA;
-  --cream:#FDF7F0;
-  --rosesoft:#F9E3E8;
-  --field:#F7DCE3;
+  --paper:#F8FBFE;
+  --ink:#15202F;
+  --ink-soft:#5C6B80;
+  --line:#CFE1F4;
+  --blue:#2E63D4;
+  --blue-deep:#1C4AA8;
+  --sky:#E4EFFC;
+  --peri:#E8EAFB;
+  --aqua:#DCF0F3;
+  --peach:#FDEDE4;
+  --field:#D7E7FA;
   color-scheme:light;
 }
 *,*::before,*::after{box-sizing:border-box}
@@ -36,134 +36,165 @@ body{
   margin:0;background:var(--paper);color:var(--ink);
   font-family:"Plus Jakarta Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
   font-size:17px;line-height:1.62;font-weight:400;
-  -webkit-font-smoothing:antialiased;
+  -webkit-font-smoothing:antialiased;overflow-x:hidden;
 }
 img{max-width:100%;display:block;height:auto}
 .shell{max-width:1120px;margin:0 auto;padding-inline:26px}
-.serif{font-family:Fraunces,Georgia,"Times New Roman",serif}
 
 /* ===== nav ===== */
-.top{display:flex;justify-content:space-between;align-items:center;gap:18px;padding-block:20px;flex-wrap:wrap}
+.top{display:flex;justify-content:space-between;align-items:center;gap:14px;padding-block:20px}
 .top .mark{
   font-family:Fraunces,Georgia,serif;font-weight:900;font-size:19px;
-  letter-spacing:-.02em;text-decoration:none;color:var(--ink);
+  letter-spacing:-.02em;text-decoration:none;color:var(--ink);white-space:nowrap;
   font-variation-settings:"WONK" 1,"SOFT" 20;
 }
-.top nav{display:flex;gap:6px;flex-wrap:wrap}
+.top nav{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.top nav::-webkit-scrollbar{display:none}
 .top nav a{
-  text-decoration:none;color:var(--ink);font-weight:600;font-size:14.5px;
+  text-decoration:none;color:var(--ink);font-weight:600;font-size:14.5px;white-space:nowrap;
   padding:7px 14px;border-radius:999px;border:1.5px solid transparent;
   transition:background .15s,border-color .15s;
 }
-.top nav a:hover{background:var(--blush);border-color:var(--line)}
-.top nav a:focus-visible{outline:2px solid var(--rose);outline-offset:2px}
+.top nav a:hover{background:var(--sky);border-color:var(--line)}
+.top nav a:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
 
 /* ===== hero ===== */
-.hero{padding-block:30px 10px}
+.hero{padding-block:26px 10px}
 .kicker{
-  display:inline-block;background:var(--blush);color:var(--rose);
+  display:inline-block;background:var(--sky);color:var(--blue-deep);
   font-weight:700;font-size:13.5px;padding:7px 16px;border-radius:999px;
-  margin:0 0 26px;border:1.5px solid var(--line);
+  margin:0 0 24px;border:1.5px solid var(--line);
 }
 .hero h1{
   font-family:Fraunces,Georgia,serif;
   font-weight:900;font-variation-settings:"WONK" 1,"SOFT" 30;
-  font-size:clamp(50px,9.2vw,112px);
-  line-height:.94;letter-spacing:-.035em;
-  margin:0 0 34px;max-width:16ch;
+  font-size:clamp(40px,9vw,112px);
+  line-height:.96;letter-spacing:-.035em;
+  margin:0 0 30px;max-width:16ch;
 }
 .hero h1 em{
   font-style:normal;
-  background:linear-gradient(transparent 52%, var(--line) 52%, var(--line) 92%, transparent 92%);
+  background:linear-gradient(transparent 52%, var(--field) 52%, var(--field) 92%, transparent 92%);
 }
 .herogrid{display:grid;grid-template-columns:minmax(0,1.02fr) minmax(0,.98fr);gap:46px;align-items:start}
-.herotext p{
-  font-size:clamp(18px,2.05vw,20.5px);line-height:1.58;
-  margin:0 0 20px;max-width:44ch;color:var(--ink);
+.herotext p.lede{
+  font-size:clamp(18px,2.1vw,21px);line-height:1.5;font-weight:600;
+  margin:0 0 18px;max-width:42ch;color:var(--ink);letter-spacing:-.005em;
 }
-.herotext p.second{color:var(--ink-soft);font-size:clamp(16.5px,1.8vw,18.5px)}
-.herobtns{display:flex;gap:10px;flex-wrap:wrap;margin-top:28px}
-.btn.ghost{background:transparent;color:var(--rose);border-color:var(--line)}
-.btn.ghost:hover{background:var(--blush);color:var(--rose-deep);border-color:var(--rose)}
+.herotext p.second{
+  color:var(--ink-soft);font-size:clamp(16px,1.75vw,17.5px);
+  margin:0;max-width:46ch;line-height:1.62;
+}
+.herobtns{display:flex;gap:10px;flex-wrap:wrap;margin-top:26px}
 
-/* gallery */
-.gallery{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.shot{
-  background:var(--blush);border:2px solid var(--line);border-radius:12px;
-  overflow:hidden;position:relative;
-}
-.shot.lead{grid-column:1 / -1}
+/* photo stepper */
+.shot{background:var(--sky);border:2px solid var(--line);border-radius:14px;overflow:hidden}
 .shot img{width:100%}
 .shotcap{
   padding:10px 14px 12px;font-weight:600;font-size:13.5px;color:var(--ink);
-  display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;background:var(--blush);
+  display:flex;justify-content:space-between;align-items:center;gap:10px;background:var(--sky);
 }
-.shotcap span:last-child{color:var(--ink-soft);font-weight:500}
+.pnav{display:inline-flex;align-items:center;gap:9px;font-weight:600;color:var(--ink-soft)}
+.pnav button{
+  width:30px;height:30px;border-radius:999px;cursor:pointer;
+  border:1.5px solid var(--line);background:#fff;color:var(--blue);
+  font-size:17px;line-height:1;font-family:inherit;
+}
+.pnav button:hover{background:var(--blue);color:#fff;border-color:var(--blue)}
+.pnav button:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
+.pnav button[disabled]{opacity:.35;cursor:default}
+.pnav button[disabled]:hover{background:#fff;color:var(--blue);border-color:var(--line)}
 
 /* ===== band ===== */
-.band{margin-top:64px;border-block:2px solid var(--line);background:var(--sand)}
-.band .shell{padding-block:48px}
+.band{margin-top:60px;border-block:2px solid var(--line);background:var(--aqua)}
+.band .shell{padding-block:46px}
 .band h2{
   font-family:Fraunces,Georgia,serif;font-weight:900;font-variation-settings:"WONK" 1;
-  font-size:clamp(28px,4.3vw,42px);letter-spacing:-.028em;margin:0 0 8px;line-height:1.08;
+  font-size:clamp(26px,4.3vw,42px);letter-spacing:-.028em;margin:0 0 8px;line-height:1.08;
 }
-.band .when{font-weight:600;font-size:14px;color:var(--rose);margin:0 0 26px}
-.nowlist{display:grid;grid-template-columns:repeat(auto-fit,minmax(248px,1fr));gap:22px;margin:0;padding:0;list-style:none}
+.band .when{font-weight:600;font-size:14px;color:var(--blue-deep);margin:0 0 26px}
+.nowlist{display:grid;grid-template-columns:repeat(auto-fit,minmax(252px,1fr));gap:24px;margin:0;padding:0;list-style:none}
 .nowlist li{border-top:2px solid var(--line);padding-top:14px}
-.nowlist b{display:block;font-weight:700;font-size:17px;margin-bottom:4px}
-.nowlist span{font-size:15.5px;color:var(--ink-soft);line-height:1.55}
+.nowlist b{display:block;font-weight:700;font-size:17.5px;margin-bottom:6px}
+.nowlist span{font-size:15.5px;color:var(--ink-soft);line-height:1.6;display:block}
 
 /* ===== work ===== */
-.work{padding-block:72px 20px}
+.work{padding-block:68px 20px}
 .work > h2{
   font-family:Fraunces,Georgia,serif;font-weight:900;font-variation-settings:"WONK" 1;
-  font-size:clamp(32px,5.6vw,58px);letter-spacing:-.03em;margin:0 0 10px;line-height:1.02;
+  font-size:clamp(30px,5.6vw,58px);letter-spacing:-.03em;margin:0 0 12px;line-height:1.02;
 }
-.work > .sub{font-size:18px;color:var(--ink-soft);margin:0 0 42px;max-width:50ch}
+.work > .sub{font-size:17.5px;color:var(--ink-soft);margin:0 0 40px;max-width:54ch;line-height:1.6}
 .piece{
-  border:2px solid var(--line);border-radius:14px;
-  padding:34px 32px;margin-bottom:24px;
-  display:grid;grid-template-columns:minmax(0,1fr) auto;gap:16px 34px;align-items:start;
+  border:2px solid var(--line);border-radius:16px;
+  padding:32px 30px;margin-bottom:22px;
+  display:grid;grid-template-columns:minmax(0,1fr) auto;gap:14px 30px;align-items:start;
 }
-.piece.a{background:var(--blush)}
-.piece.b{background:var(--cream)}
-.piece.c{background:var(--rosesoft)}
-.piece.c{grid-template-columns:minmax(0,1fr) auto}
+.piece.a{background:var(--sky)}
+.piece.b{background:var(--peri)}
+.piece.c{background:var(--peach)}
 .piece h3{
   font-family:Fraunces,Georgia,serif;font-weight:900;font-variation-settings:"WONK" 1;
-  font-size:clamp(26px,3.7vw,38px);letter-spacing:-.028em;margin:0 0 12px;line-height:1.05;
+  font-size:clamp(24px,3.7vw,38px);letter-spacing:-.028em;margin:0 0 12px;line-height:1.05;
 }
-.piece p{margin:0 0 20px;max-width:54ch;font-size:16.8px}
+.piece p{margin:0 0 20px;max-width:54ch;font-size:16.5px}
 .tagrow{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 20px}
 .tag{
-  font-size:13px;font-weight:700;padding:5px 12px;border-radius:999px;
-  background:rgba(255,255,255,.8);border:1.5px solid var(--line);color:var(--ink);
+  font-size:12.5px;font-weight:700;padding:5px 12px;border-radius:999px;
+  background:rgba(255,255,255,.82);border:1.5px solid var(--line);color:var(--ink);
 }
 .btn{
   display:inline-block;text-decoration:none;font-weight:700;font-size:15.5px;
-  background:var(--rose);color:#fff;padding:12px 22px;border-radius:999px;
-  border:2px solid var(--rose);transition:transform .14s,background .14s,border-color .14s;
+  background:var(--blue);color:#fff;padding:12px 22px;border-radius:999px;
+  border:2px solid var(--blue);transition:transform .14s,background .14s,border-color .14s;
+  cursor:pointer;font-family:inherit;
 }
-.btn:hover{background:var(--rose-deep);border-color:var(--rose-deep);transform:translateY(-2px)}
+.btn:hover{background:var(--blue-deep);border-color:var(--blue-deep);transform:translateY(-2px)}
 .btn:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+.btn.ghost{background:transparent;color:var(--blue);border-color:var(--line)}
+.btn.ghost:hover{background:var(--sky);color:var(--blue-deep);border-color:var(--blue)}
 .num{
-  font-family:Fraunces,Georgia,serif;font-weight:900;color:var(--rose);
-  font-size:clamp(40px,7vw,76px);line-height:.9;opacity:.2;letter-spacing:-.04em;
+  font-family:Fraunces,Georgia,serif;font-weight:900;color:var(--blue);
+  font-size:clamp(38px,7vw,76px);line-height:.9;opacity:.22;letter-spacing:-.04em;
 }
+
+/* product carousel */
+.shelf{grid-column:1 / -1;margin-top:8px}
+.stage{position:relative;height:420px;perspective:1300px;display:flex;align-items:center;justify-content:center}
+.stage figure{
+  position:absolute;margin:0;width:262px;border-radius:10px;overflow:hidden;
+  box-shadow:0 14px 34px rgba(20,40,80,.22);
+  transition:transform .5s cubic-bezier(.3,.8,.3,1),opacity .4s;cursor:pointer;background:#fff;
+}
+.stage figure img{width:100%;display:block}
+.stage figure.c{transform:translateX(0) scale(1);opacity:1;z-index:3}
+.stage figure.l{transform:translateX(-196px) scale(.8) rotateY(22deg);opacity:.65;z-index:2}
+.stage figure.r{transform:translateX(196px) scale(.8) rotateY(-22deg);opacity:.65;z-index:2}
+.stage figure.hide{transform:scale(.68);opacity:0;z-index:1;pointer-events:none}
+.shelfnav{display:flex;align-items:center;justify-content:center;gap:14px;margin-top:16px;font-weight:600;color:var(--ink-soft);font-size:14.5px}
+.shelfnav button{
+  width:38px;height:38px;border-radius:999px;cursor:pointer;
+  border:2px solid var(--blue);background:transparent;color:var(--blue);
+  font-size:20px;line-height:1;font-family:inherit;
+}
+.shelfnav button:hover{background:var(--blue);color:#fff}
+.shelfnav button:focus-visible{outline:3px solid var(--ink);outline-offset:2px}
+.shelfempty{text-align:center;color:var(--ink-soft);font-size:15px;padding:40px 0}
+@media (prefers-reduced-motion:reduce){.stage figure{transition:none}}
 
 /* ===== creators ===== */
 .deal{border-block:2px solid var(--line);background:var(--field)}
-.deal .shell{padding-block:58px}
+.deal .shell{padding-block:54px}
 .deal h2{
   font-family:Fraunces,Georgia,serif;font-weight:900;font-variation-settings:"WONK" 1;
-  font-size:clamp(30px,5.2vw,52px);letter-spacing:-.03em;margin:0 0 14px;line-height:1.06;max-width:26ch;
+  font-size:clamp(27px,5.2vw,52px);letter-spacing:-.03em;margin:0 0 14px;line-height:1.06;max-width:26ch;
 }
-.deal .sub{font-size:18px;margin:0 0 34px;max-width:56ch;font-weight:500}
-.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(192px,1fr));gap:16px;margin:0 0 34px;padding:0;list-style:none;counter-reset:s}
-.steps li{background:var(--paper);border:2px solid var(--line);border-radius:12px;padding:20px 20px 22px}
+.deal .sub{font-size:17.5px;margin:0 0 32px;max-width:56ch;font-weight:500;line-height:1.6}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:16px;margin:0 0 32px;padding:0;list-style:none;counter-reset:s}
+.steps li{background:var(--paper);border:2px solid var(--line);border-radius:14px;padding:20px 20px 22px}
 .steps li::before{
   counter-increment:s;content:counter(s);
-  font-family:Fraunces,Georgia,serif;font-weight:900;font-size:26px;color:var(--rose);
+  font-family:Fraunces,Georgia,serif;font-weight:900;font-size:26px;color:var(--blue);
   display:block;margin-bottom:8px;line-height:1;
 }
 .steps li b{display:block;font-weight:700;font-size:16.5px;margin-bottom:5px}
@@ -171,22 +202,30 @@ img{max-width:100%;display:block;height:auto}
 .dealnote{font-size:15.5px;max-width:62ch;margin:0;font-weight:500}
 
 /* ===== contact ===== */
-.contact{background:var(--rose);color:#fff;border-bottom:2px solid var(--rose-deep)}
-.contact .shell{padding-block:68px}
+.contact{background:var(--blue);color:#fff;border-bottom:2px solid var(--blue-deep)}
+.contact .shell{padding-block:62px}
 .contact h2{
   font-family:Fraunces,Georgia,serif;font-weight:900;font-variation-settings:"WONK" 1;
-  font-size:clamp(34px,6vw,64px);letter-spacing:-.032em;margin:0 0 16px;line-height:1.02;
+  font-size:clamp(32px,6vw,62px);letter-spacing:-.032em;margin:0 0 14px;line-height:1.02;
 }
-.contact p{font-size:18px;margin:0 0 30px;max-width:48ch;color:#FBE4E9}
-.mailbtn{
-  display:inline-block;text-decoration:none;font-weight:700;
-  font-size:clamp(17px,2.6vw,22px);
-  background:#fff;color:var(--rose);
-  padding:16px 30px;border-radius:999px;border:2px solid #fff;
-  transition:transform .14s;word-break:break-word;
+.contact .intro{font-size:17.5px;margin:0 0 34px;max-width:50ch;color:#DCE6FB;line-height:1.6}
+.form{
+  background:var(--paper);border-radius:18px;padding:30px 28px 32px;
+  max-width:720px;color:var(--ink);
 }
-.mailbtn:hover{transform:translateY(-2px)}
-.mailbtn:focus-visible{outline:3px solid var(--ink);outline-offset:4px}
+.fgrid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px}
+.field label{display:block;font-weight:700;font-size:14px;margin-bottom:6px;color:var(--ink)}
+.field input,.field textarea{
+  width:100%;font-family:inherit;font-size:16px;color:var(--ink);
+  background:#fff;border:2px solid var(--line);border-radius:10px;
+  padding:12px 14px;line-height:1.5;
+}
+.field textarea{min-height:120px;resize:vertical}
+.field input::placeholder,.field textarea::placeholder{color:#9AA8B8}
+.field input:focus,.field textarea:focus{outline:none;border-color:var(--blue);box-shadow:0 0 0 3px rgba(46,99,212,.16)}
+.form .btn{width:auto;margin-top:4px}
+.direct{margin:22px 0 0;font-size:16px;color:#DCE6FB}
+.direct a{color:#fff;font-weight:700}
 .elsewhere{margin:26px 0 0;display:flex;gap:10px;flex-wrap:wrap}
 .elsewhere a{
   text-decoration:none;color:#fff;font-weight:600;font-size:15px;
@@ -196,59 +235,42 @@ img{max-width:100%;display:block;height:auto}
 
 footer{padding-block:24px 40px;font-size:14px;color:var(--ink-soft);display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;font-weight:500}
 
-/* photo stepper */
-.pgal .shot{border-radius:12px}
-.pnav{display:inline-flex;align-items:center;gap:9px;font-weight:600;color:var(--ink-soft)}
-.pnav button{
-  width:30px;height:30px;border-radius:999px;cursor:pointer;
-  border:1.5px solid var(--line);background:#fff;color:var(--rose);
-  font-size:17px;line-height:1;font-family:inherit;
-}
-.pnav button:hover{background:var(--rose);color:#fff;border-color:var(--rose)}
-.pnav button:focus-visible{outline:2px solid var(--rose);outline-offset:2px}
-.pnav button[disabled]{opacity:.35;cursor:default}
-.pnav button[disabled]:hover{background:#fff;color:var(--rose);border-color:var(--line)}
-
-/* product carousel */
-.shelf{grid-column:1 / -1;margin-top:10px}
-.stage{
-  position:relative;height:420px;perspective:1300px;
-  display:flex;align-items:center;justify-content:center;
-}
-.stage figure{
-  position:absolute;margin:0;width:262px;
-  border-radius:9px;overflow:hidden;
-  box-shadow:0 12px 30px rgba(60,25,35,.2);
-  transition:transform .5s cubic-bezier(.3,.8,.3,1),opacity .4s;
-  cursor:pointer;background:#fff;
-}
-.stage figure img{width:100%;display:block}
-.stage figure.c{transform:translateX(0) scale(1);opacity:1;z-index:3}
-.stage figure.l{transform:translateX(-162px) scale(.8) rotateY(22deg);opacity:.62;z-index:2}
-.stage figure.r{transform:translateX(162px) scale(.8) rotateY(-22deg);opacity:.62;z-index:2}
-.stage figure.hide{transform:scale(.68);opacity:0;z-index:1;pointer-events:none}
-.shelfnav{display:flex;align-items:center;justify-content:center;gap:14px;margin-top:16px;font-weight:600;color:var(--ink-soft);font-size:14.5px}
-.shelfnav button{
-  width:38px;height:38px;border-radius:999px;cursor:pointer;
-  border:2px solid var(--rose);background:transparent;color:var(--rose);
-  font-size:20px;line-height:1;font-family:inherit;
-}
-.shelfnav button:hover{background:var(--rose);color:#fff}
-.shelfnav button:focus-visible{outline:3px solid var(--ink);outline-offset:2px}
-.shelfempty{text-align:center;color:var(--ink-soft);font-size:15px;padding:40px 0}
-@media (prefers-reduced-motion:reduce){.stage figure{transition:none}}
-
+/* ===== phone ===== */
 @media (max-width:880px){
+  .herogrid{grid-template-columns:1fr;gap:30px}
+  .shot{max-width:420px}
+  .piece{grid-template-columns:1fr;padding:24px 20px;border-radius:14px}
+  .num{display:none}
+  .band{margin-top:44px}
+  .work{padding-block:50px 12px}
   .stage{height:330px}
   .stage figure{width:196px}
-  .stage figure.l{transform:translateX(-96px) scale(.78) rotateY(20deg)}
-  .stage figure.r{transform:translateX(96px) scale(.78) rotateY(-20deg)}
-  .herogrid{grid-template-columns:1fr;gap:34px}
-  .gallery{max-width:420px}
-  .piece{grid-template-columns:1fr;padding:26px 22px}
-  .num{display:none}
-  .band{margin-top:48px}
-  .work{padding-block:54px 14px}
+  .stage figure.l{transform:translateX(-112px) scale(.78) rotateY(20deg)}
+  .stage figure.r{transform:translateX(112px) scale(.78) rotateY(-20deg)}
+}
+@media (max-width:620px){
+  body{font-size:16.5px}
+  .shell{padding-inline:20px}
+  .top{padding-block:16px}
+  .top .mark{font-size:17px}
+  .hero{padding-block:18px 4px}
+  .hero h1{margin-bottom:24px;line-height:1.0;letter-spacing:-.03em}
+  .kicker{font-size:12.5px;padding:6px 13px;margin-bottom:20px}
+  .herobtns .btn{flex:1 1 100%;text-align:center}
+  .band .shell{padding-block:38px}
+  .nowlist{gap:20px}
+  .deal .shell{padding-block:44px}
+  .steps{grid-template-columns:1fr;gap:12px}
+  .steps li{padding:16px 18px 18px}
+  .contact .shell{padding-block:48px}
+  .form{padding:22px 18px 24px;border-radius:14px}
+  .fgrid{grid-template-columns:1fr;gap:14px;margin-bottom:14px}
+  .form .btn{width:100%;text-align:center}
+  .stage{height:300px}
+  .stage figure{width:176px}
+  .stage figure.l{transform:translateX(-96px) scale(.76) rotateY(18deg)}
+  .stage figure.r{transform:translateX(96px) scale(.76) rotateY(-18deg)}
+  footer{flex-direction:column;gap:6px}
 }
 </style>
 </head>
@@ -266,29 +288,27 @@ footer{padding-block:24px 40px;font-size:14px;color:var(--ink-soft);display:flex
   </header>
 
   <div class="hero">
-    <p class="kicker">Toronto · Engineering student and entrepreneur</p>
+    <p class="kicker">Toronto · Engineering Student and Entrepreneur</p>
     <h1>I build things before anyone tells me I'm <em>ready to</em>.</h1>
     <div class="herogrid">
       <div class="herotext">
-        <p>I'm in my second year of mechanical engineering at Toronto Metropolitan University. Outside of class I run an online store and build digital products for creators.</p>
-        <p class="second">I'd rather have a finished thing with problems than a perfect plan nobody has seen. Everything on this page started as something I had no idea how to do.</p>
+        <p class="lede">I'm in my second year of mechanical engineering at Toronto Metropolitan University. Outside of class I run an online store and build digital products for creators.</p>
+        <p class="second">I'd rather put something imperfect into the world than spend forever perfecting something no one will ever see. Everything on this page started as an idea I had no clue how to bring to life. I figured it out by starting.</p>
         <div class="herobtns">
           <a class="btn" href="#work">See what I've made</a>
           <a class="btn ghost" href="#creators">Work with me</a>
         </div>
       </div>
 
-      <div class="pgal">
-        <div class="shot" id="pshot">
-          <img id="pimg" src="photo-1.jpg" alt="Aaron Udho" width="860" height="860">
-          <div class="shotcap">
-            <span id="pcap">Aaron Udho, Toronto</span>
-            <span class="pnav">
-              <button type="button" id="pprev" aria-label="Previous photo">&#8249;</button>
-              <span id="pcount">1 / 1</span>
-              <button type="button" id="pnext" aria-label="Next photo">&#8250;</button>
-            </span>
-          </div>
+      <div class="shot" id="pshot">
+        <img id="pimg" src="photo-1.jpg" alt="Aaron Udho" width="860" height="860">
+        <div class="shotcap">
+          <span id="pcap">Aaron Udho, Toronto</span>
+          <span class="pnav">
+            <button type="button" id="pprev" aria-label="Previous photo">&#8249;</button>
+            <span id="pcount">1 / 1</span>
+            <button type="button" id="pnext" aria-label="Next photo">&#8250;</button>
+          </span>
         </div>
       </div>
     </div>
@@ -300,9 +320,9 @@ footer{padding-block:24px 40px;font-size:14px;color:var(--ink-soft);display:flex
     <h2>What I'm working on right now</h2>
     <p class="when">Updated October 2026</p>
     <ul class="nowlist">
-      <li><b>Scaling Snugget</b><span>Prioritising quality over quantity, and marketing it properly on Instagram.</span></li>
-      <li><b>Digital products for creators</b><span>Writing ebooks that creators put their name on, and lining up the next one.</span></li>
-      <li><b>Looking for an internship</b><span>Mechanical engineering, summer 2027. Happy to talk about anything in design or manufacturing.</span></li>
+      <li><b>Scaling Snugget</b><span>Cutting the store down to two products and doing those properly instead of spreading thin across twenty. Building out the product pages, shooting the creative, and putting real effort into Instagram rather than hoping traffic shows up on its own.</span></li>
+      <li><b>Digital products for creators</b><span>Researching and writing ebooks that creators put their name on and sell to their own audience. The first one is finished. I'm working out which niche the next one belongs in, and talking to creators about what their followers keep asking them for.</span></li>
+      <li><b>Looking for an internship</b><span>Mechanical engineering, summer 2027. Most interested in design and manufacturing, where I'd get to see something go from a drawing to a physical part. Happy to talk to anyone building real things.</span></li>
     </ul>
   </div>
 </div>
@@ -310,7 +330,7 @@ footer{padding-block:24px 40px;font-size:14px;color:var(--ink-soft);display:flex
 <div class="shell">
   <section class="work" id="work">
     <h2>Things I've made</h2>
-    <p class="sub">Three unrelated projects, which is the point. I like the part where nothing exists yet.</p>
+    <p class="sub">Three projects with almost nothing in common, which is what I like about them. There's something exciting about starting from scratch and seeing where an idea takes me.</p>
 
     <article class="piece a">
       <div>
@@ -368,9 +388,47 @@ footer{padding-block:24px 40px;font-size:14px;color:var(--ink-soft);display:flex
 
 <div class="contact" id="contact">
   <div class="shell">
-    <h2>Let's talk</h2>
-    <p>Creator partnerships, internships, or anything you're building. I answer my own email, usually the same day.</p>
-    <a class="mailbtn" href="mailto:info@aaronudho.com">info@aaronudho.com</a>
+    <h2>Let's connect</h2>
+    <p class="intro">Creator partnerships, internships, or anything you're building. Drop me a line and I'll get back to you, usually the same day.</p>
+
+    <form class="form" action="https://formsubmit.co/info@aaronudho.com" method="POST">
+      <input type="hidden" name="_subject" value="New message from aaronudho.com">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_template" value="table">
+      <input type="text" name="_honey" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px">
+
+      <div class="fgrid">
+        <div class="field">
+          <label for="name">Full name</label>
+          <input id="name" name="Name" type="text" placeholder="Jane Smith" required autocomplete="name">
+        </div>
+        <div class="field">
+          <label for="email">Email address</label>
+          <input id="email" name="Email" type="email" placeholder="jane@example.com" required autocomplete="email">
+        </div>
+      </div>
+
+      <div class="fgrid">
+        <div class="field">
+          <label for="phone">Phone number</label>
+          <input id="phone" name="Phone" type="tel" placeholder="Optional" autocomplete="tel">
+        </div>
+        <div class="field">
+          <label for="subject">What's this about?</label>
+          <input id="subject" name="Topic" type="text" placeholder="Partnership, internship, something else">
+        </div>
+      </div>
+
+      <div class="field" style="margin-bottom:18px">
+        <label for="message">Your inquiry</label>
+        <textarea id="message" name="Message" placeholder="Tell me what you're working on." required></textarea>
+      </div>
+
+      <button class="btn" type="submit">Let's start a conversation</button>
+    </form>
+
+    <p class="direct">Or reach me directly at <a href="mailto:info@aaronudho.com">info@aaronudho.com</a></p>
+
     <div class="elsewhere">
       <a href="https://www.linkedin.com/in/aaronudho/" target="_blank" rel="noopener">LinkedIn</a>
       <a href="https://aaronudho.github.io/portfolio/" target="_blank" rel="noopener">Portfolio</a>
@@ -410,7 +468,6 @@ footer{padding-block:24px 40px;font-size:14px;color:var(--ink-soft);display:flex
     return found;
   }
 
-  /* ---------- photo stepper ---------- */
   (async function(){
     var img = document.getElementById("pimg");
     if (!img) return;
@@ -431,7 +488,6 @@ footer{padding-block:24px 40px;font-size:14px;color:var(--ink-soft);display:flex
     draw();
   })();
 
-  /* ---------- product carousel ---------- */
   (async function(){
     var stage = document.getElementById("stage");
     if (!stage) return;
