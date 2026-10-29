@@ -35,17 +35,26 @@ document.addEventListener("submit",async function(e){
   var form=e.target;
   if(!form.matches||!form.matches("form.ticket"))return;
   e.preventDefault();
+  var KEY="formSentAt",WAIT=300000;
   var btn=form.querySelector("button[type=submit]");
   var label=btn.textContent;
   function show(t,ms){btn.textContent=t;setTimeout(function(){btn.textContent=label;btn.disabled=false},ms)}
+  function last(){try{return Number(localStorage.getItem(KEY))||0}catch(x){return window.__sentAt||0}}
+  var left=WAIT-(Date.now()-last());
+  if(left>0){show("Please wait "+Math.ceil(left/60000)+" min before sending another.",5000);return}
+  if(Date.now()-(window.__formLoaded||0)<3000)return;
   btn.disabled=true;btn.textContent="Sending...";
   try{
     var res=await fetch(form.action,{method:"POST",headers:{Accept:"application/json"},body:new FormData(form)});
     var data=await res.json();
-    if(data.success){form.reset();show("Sent. Thanks, I'll reply soon.",6000)}
-    else{show("Didn't send. Email info@aaronudho.com",8000)}
+    if(data.success){
+      window.__sentAt=Date.now();
+      try{localStorage.setItem(KEY,String(window.__sentAt))}catch(x){}
+      form.reset();show("Sent. Thanks, I'll reply soon.",6000)
+    }else{show("Didn't send. Email info@aaronudho.com",8000)}
   }catch(err){show("Didn't send. Email info@aaronudho.com",8000)}
 });
+window.__formLoaded=Date.now();
 </script>
 </body>
 </html>
