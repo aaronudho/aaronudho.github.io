@@ -30,5 +30,22 @@ Error generating stack: `+e.message+`
   </head>
   <body>
     <div id="root"></div>
-  </body>
+  <script>
+document.addEventListener("submit",async function(e){
+  var form=e.target;
+  if(!form.matches||!form.matches("form.ticket"))return;
+  e.preventDefault();
+  var btn=form.querySelector("button[type=submit]");
+  var label=btn.textContent;
+  function show(t,ms){btn.textContent=t;setTimeout(function(){btn.textContent=label;btn.disabled=false},ms)}
+  btn.disabled=true;btn.textContent="Sending...";
+  try{
+    var res=await fetch(form.action,{method:"POST",headers:{Accept:"application/json"},body:new FormData(form)});
+    var data=await res.json();
+    if(data.success){form.reset();show("Sent. Thanks, I'll reply soon.",6000)}
+    else{show("Didn't send. Email info@aaronudho.com",8000)}
+  }catch(err){show("Didn't send. Email info@aaronudho.com",8000)}
+});
+</script>
+</body>
 </html>
